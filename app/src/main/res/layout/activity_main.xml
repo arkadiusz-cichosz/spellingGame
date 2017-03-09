@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cichorki.literowazgadywanka.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32px"
+        android:text="Tu pojawi się wylosowane słowo"
+        android:id="@+id/wylosowane"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="176dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32px"
+        android:textColor="#ff00"
+        android:textStyle="bold"
+        android:id="@+id/punkty"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/gotowe" />
+
+    <Button
+        android:text="GOTOWE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gotowe"
+        android:onClick="gotowe"
+        android:textSize="32px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOSUJ WYRAZ"
+        android:textSize="32px"
+        android:id="@+id/losuj"
+        android:onClick="losuj_wyraz"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/obrazek"
+        android:layout_alignBottom="@+id/koniec"
+        android:layout_alignStart="@+id/wylosowane"
+        android:layout_marginStart="28dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="32px"
+        android:hint="Wpisz tutaj zapamiętany wyraz"
+        android:id="@+id/edytor"
+        android:layout_marginTop="64dp"
+        android:layout_below="@+id/losuj"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
