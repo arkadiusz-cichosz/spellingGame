@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
     };
     private TextView wylosowane_slowo;
     private EditText edytor;
-    private TextView punkty;
+    public TextView punkty;
     private ImageView obrazek;
 
     public void losuj_wyraz(View v) {
         Random losowanie=new Random();
         liczba=losowanie.nextInt(27);
         wylosowane_slowo.setText(wyrazy[liczba]);
-        temp= wylosowane_slowo.toString();
+        temp = wylosowane_slowo.toString();
         handler.postDelayed(timer,5000);
     }
 
@@ -68,7 +68,7 @@ if(!isEmpty) {
         toast.show();
         Log.d("INFO", "prawidłowa odpowiedź: " + slowo);
         total += 10;
-        punkty.setText(fraza + total);
+        punkty.setText((fraza + total));
         edytor.setText("");
     } else {
         id_obrazka = R.drawable.buzia2;
@@ -77,7 +77,7 @@ if(!isEmpty) {
         toast.show();
         Log.d("INFO", "prawidłowa odpowiedź: " + slowo);
         total -= 5;
-        punkty.setText(fraza + total);
+        punkty.setText((fraza + total));
         edytor.setText("");
     }
 }
